@@ -4,8 +4,6 @@ public class Middleware(RequestDelegate next)
 {
 	public async Task InvokeAsync(HttpContext context, DatabaseContext databaseContext)
 	{
-		Console.WriteLine(context);
-
 		var headers = context.Request.Headers;
 
 		var request = new Request();
